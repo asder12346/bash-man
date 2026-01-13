@@ -94,29 +94,37 @@ const ProblemSolution = () => {
         }
 
         .section-header {
-          margin-bottom: 60px;
+          margin-bottom: 80px;
           text-align: center;
         }
 
         .section-subtitle {
-          font-size: 1.2rem;
+          font-size: 1.25rem;
           max-width: 600px;
           margin: 16px auto 0;
+          color: var(--text-muted);
         }
 
         .problem-card {
-          background: var(--bg-tertiary);
+          background: var(--bg-primary);
           border: 1px solid var(--border-subtle);
-          border-radius: 16px;
+          border-radius: 24px;
           position: relative;
           overflow: hidden;
-          min-height: 280px;
+          min-height: 320px;
           display: flex;
           flex-direction: column;
+          transition: all 0.4s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
 
         .card-image {
-            height: 120px;
+            height: 160px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -125,51 +133,57 @@ const ProblemSolution = () => {
         .image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #18181b);
+            background: linear-gradient(to bottom, transparent, var(--bg-primary));
         }
 
         .card-content {
-            padding: 24px;
+            padding: 32px;
             position: relative;
             flex: 1;
         }
 
         .problem-icon {
-          font-size: 2rem;
+          font-size: 1.5rem;
           position: absolute;
-          top: -30px; 
-          left: 20px;
-          background: var(--bg-tertiary);
+          top: -24px; 
+          left: 32px;
+          background: var(--accent-primary);
           border-radius: 50%;
           padding: 8px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-          border: 1px solid var(--border-light);
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 60px;
-          height: 60px;
+          width: 48px;
+          height: 48px;
+          color: var(--text-dark);
+          box-shadow: 0 4px 15px var(--accent-glow);
         }
 
         .problem-card h3 {
-          font-size: 1.25rem;
-          margin-bottom: 10px;
-          margin-top: 20px;
+          font-size: 1.4rem;
+          margin-bottom: 12px;
+          margin-top: 8px;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Solution Styles */
         .solution-section {
-          background: linear-gradient(to bottom, var(--bg-tertiary), var(--bg-primary));
+          background: var(--bg-secondary);
           border-top: 1px solid var(--border-subtle);
           border-bottom: 1px solid var(--border-subtle);
         }
 
         .solution-intro {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           margin-bottom: 40px;
-          max-width: 700px;
+          max-width: 800px;
           margin-left: auto;
           margin-right: auto;
+          color: var(--text-main);
         }
 
         .cta-wrapper {
@@ -177,11 +191,17 @@ const ProblemSolution = () => {
         }
 
         .impact-statement {
-          font-size: 1.5rem;
-          font-family: var(--font-display);
+          font-size: 1.75rem;
+          font-family: var(--font-serif);
+          font-style: italic;
           font-weight: 700;
           color: var(--text-main);
-          letter-spacing: -0.02em;
+          letter-spacing: -0.01em;
+        }
+
+        @media (max-width: 768px) {
+            .card-content { padding: 24px; }
+            .problem-icon { left: 24px; }
         }
       `}</style>
     </>

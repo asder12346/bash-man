@@ -1,205 +1,299 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const Hero = () => {
-  // A professional brand image representing a high-end digital marketer
-  const brandImage = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80";
-  const bgImage = "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1920&q=80";
+  // Portait cutout with transparent background (stylized using a professional stock photo)
+  const personImage = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80";
 
   return (
     <section className="hero">
-      <div className="hero-bg-overlay" style={{ backgroundImage: `url(${bgImage})` }}></div>
+      {/* Background Glows */}
+      <div className="bg-glow bg-glow-1"></div>
+      <div className="bg-glow bg-glow-2"></div>
 
-      <div className="container grid-2">
-        <div className="hero-content-left animate-fade-in">
-          <span className="hero-badge">Elite Digital Strategist</span>
-          <h1 className="hero-title">
-            I am <span className="text-accent-gradient">Bash Rabiu</span>. <br />
-            Scale Your Brand with <span className="text-accent-gradient">Legendary</span> Speed.
-          </h1>
+      <div className="container">
+        {/* Upper Metadata */}
+        <div className="hero-top-meta reveal fade-up">
+          <div className="medal-badge">
+            <span className="medal-year">2026</span>
+            <span className="medal-text">Elite Marketer of the Year</span>
+          </div>
+        </div>
 
-          <p className="hero-subtitle">
-            Data-driven marketing architecture designed to turn attention into high-ticket revenue. No fluff. Just ROI.
-          </p>
+        <div className="hero-grid">
+          {/* Left: Headline & Actions */}
+          <div className="hero-left">
+            <h1 className="hero-title reveal fade-left">
+              Hi I'm <span className="text-lime">Bash</span> <br />
+              <span className="italic-serif">Digital Strategist</span>
+            </h1>
 
-          <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary">Work With Me</a>
-            <a href="#results" className="btn btn-secondary">View Case Studies</a>
+            <div className="hero-availability reveal fade-up" style={{ transitionDelay: '0.2s' }}>
+              <span className="status-dot animate-pulse"></span>
+              Available for new partnerships
+            </div>
+
+            <div className="hero-trust-compact reveal fade-up" style={{ transitionDelay: '0.3s' }}>
+              <div className="avatar-group">
+                <img src="https://i.pravatar.cc/100?u=1" alt="Avatar" />
+                <img src="https://i.pravatar.cc/100?u=2" alt="Avatar" />
+                <img src="https://i.pravatar.cc/100?u=3" alt="Avatar" />
+              </div>
+              <p>Trusted by 300+ scale-ups <br /> across 15+ industries.</p>
+            </div>
           </div>
 
-          <div className="hero-trust">
-            <p>Trusted by elite brands across the globe</p>
-            <div className="trust-icons">
-              <span className="trust-item"><span className="check-icon">✓</span> 7+ Figure Managed Spend</span>
-              <span className="trust-item"><span className="check-icon">✓</span> 300% Avg ROAS</span>
+          {/* Middle: Person Cutout */}
+          <div className="hero-middle reveal zoom-in">
+            <div className="person-wrapper">
+              <div className="person-glow"></div>
+              <img src={personImage} alt="Bash Rabiu" className="person-img" />
+            </div>
+          </div>
+
+          {/* Right: Subtext & CTA */}
+          <div className="hero-right">
+            <div className="hero-description reveal fade-right">
+              <p>
+                Passionate about crafting high-performance
+                <span className="text-main"> conversion systems</span> that accelerate
+                brand growth with speed and precision.
+              </p>
+            </div>
+
+            <div className="hero-cta-wrapper reveal fade-up" style={{ transitionDelay: '0.4s' }}>
+              <a href="#contact" className="btn btn-primary btn-pill">
+                Get in Touch <ArrowUpRight size={18} style={{ marginLeft: '8px' }} />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="hero-image-right animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <div className="image-container hover-glow">
-            <img src={brandImage} alt="Bash Rabiu - Digital Marketer" className="hero-img" />
-            <div className="image-accent"></div>
+        {/* Footer Logistics */}
+        <div className="hero-bottom-marquee reveal fade-up" style={{ transitionDelay: '0.6s' }}>
+          <div className="client-logos">
+            <span>FocalPoint</span>
+            <span>Screentime</span>
+            <span>Segment</span>
+            <span>Shutterframe</span>
+            <span>Lightspeed</span>
           </div>
         </div>
       </div>
 
       <style>{`
-        .hero {
-          position: relative;
-          min-height: 90vh;
-          display: flex;
-          align-items: center;
-          padding: calc(var(--header-height) + 40px) 0 80px;
-          overflow: hidden;
-          background-color: var(--bg-primary);
-        }
+                .hero {
+                    position: relative;
+                    min-height: 100vh;
+                    padding-top: var(--header-height);
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    background: var(--bg-primary);
+                }
 
-        .hero-bg-overlay {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-            z-index: 0;
-            pointer-events: none;
-        }
+                .bg-glow {
+                    position: absolute;
+                    width: 600px;
+                    height: 600px;
+                    border-radius: 50%;
+                    filter: blur(120px);
+                    z-index: 0;
+                    opacity: 0.4;
+                    pointer-events: none;
+                }
 
-        .hero .container {
-          position: relative;
-          z-index: 1;
-        }
+                .bg-glow-1 {
+                    top: -10%;
+                    right: -10%;
+                    background: var(--accent-primary);
+                }
 
-        .hero-badge {
-          display: inline-block;
-          padding: 8px 16px;
-          background: rgba(16, 185, 129, 0.1);
-          border: 1px solid rgba(16, 185, 129, 0.2);
-          border-radius: 50px;
-          color: var(--accent-primary);
-          font-size: 0.85rem;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: 24px;
-        }
+                .bg-glow-2 {
+                    bottom: -10%;
+                    left: -10%;
+                    background: var(--accent-primary);
+                    opacity: 0.2;
+                }
 
-        .hero-title {
-          font-size: 4rem;
-          margin-bottom: 24px;
-          letter-spacing: -0.01em;
-          line-height: 1.1;
-        }
+                .hero .container {
+                    position: relative;
+                    z-index: 2;
+                }
 
-        .hero-subtitle {
-          font-size: 1.25rem;
-          margin-bottom: 40px;
-          max-width: 600px;
-          line-height: 1.6;
-          color: var(--text-muted);
-        }
+                .hero-top-meta {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                }
 
-        .hero-actions {
-          display: flex;
-          gap: 20px;
-          margin-bottom: 60px;
-        }
+                .medal-badge {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 8px 16px;
+                    border-radius: 100px;
+                    border: 1px solid var(--border-light);
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    background: rgba(255, 255, 255, 0.5);
+                    backdrop-filter: blur(4px);
+                }
 
-        .hero-trust {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
+                .medal-year {
+                    background: var(--text-main);
+                    color: white;
+                    padding: 2px 8px;
+                    border-radius: 50px;
+                    font-size: 0.75rem;
+                }
 
-        .hero-trust p {
-          font-size: 0.9rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: var(--text-muted);
-          font-weight: 600;
-        }
+                .hero-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1.2fr 1fr;
+                    align-items: center;
+                    gap: 20px;
+                }
 
-        .trust-icons {
-          display: flex;
-          gap: 30px;
-          flex-wrap: wrap;
-        }
+                .hero-title {
+                    font-size: 4.5rem;
+                    line-height: 1;
+                    margin-bottom: 30px;
+                    white-space: nowrap;
+                }
 
-        .trust-item {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-weight: 600;
-          color: var(--text-main);
-          font-size: 0.95rem;
-        }
+                .hero-availability {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 10px 20px;
+                    background: white;
+                    border: 1px solid var(--border-light);
+                    border-radius: 100px;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+                    margin-bottom: 40px;
+                }
 
-        .check-icon {
-          color: var(--accent-primary);
-          font-weight: 800;
-        }
+                .status-dot {
+                    width: 8px;
+                    height: 8px;
+                    background: #a3ff33;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px var(--accent-primary);
+                }
 
-        .hero-image-right {
-          position: relative;
-        }
+                @keyframes pulse {
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.5); opacity: 0.5; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
 
-        .image-container {
-          position: relative;
-          border-radius: 40px;
-          overflow: hidden;
-          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
-          border: 1px solid var(--border-light);
-          aspect-ratio: 0.85;
-        }
+                .animate-pulse {
+                    animation: pulse 2s infinite;
+                }
 
-        .hero-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
+                .hero-trust-compact {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                }
 
-        .image-accent {
-          position: absolute;
-          bottom: -20px;
-          right: -20px;
-          width: 200px;
-          height: 200px;
-          background: var(--accent-primary);
-          filter: blur(80px);
-          opacity: 0.2;
-          z-index: -1;
-        }
+                .avatar-group {
+                    display: flex;
+                }
 
-        @media (max-width: 1024px) {
-          .hero-title {
-            font-size: 3rem;
-          }
-          .grid-2 {
-            grid-template-columns: 1fr;
-            text-align: center;
-            gap: 60px;
-          }
-          .hero-content-left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .hero-subtitle {
-            margin-left: auto;
-            margin-right: auto;
-          }
-          .hero-actions {
-            justify-content: center;
-          }
-          .trust-icons {
-            justify-content: center;
-          }
-          .hero-image-right {
-            max-width: 500px;
-            margin: 0 auto;
-          }
-        }
-      `}</style>
+                .avatar-group img {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    margin-left: -12px;
+                }
+
+                .avatar-group img:first-child { margin-left: 0; }
+
+                .hero-trust-compact p {
+                    font-size: 0.85rem;
+                    line-height: 1.4;
+                    color: var(--text-muted);
+                }
+
+                .person-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 500px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+
+                .person-glow {
+                    position: absolute;
+                    bottom: 10%;
+                    width: 300px;
+                    height: 300px;
+                    background: var(--accent-primary);
+                    border-radius: 50%;
+                    filter: blur(80px);
+                    opacity: 0.3;
+                    z-index: -1;
+                }
+
+                .person-img {
+                    height: 110%;
+                    width: auto;
+                    object-fit: contain;
+                    border-radius: 0 0 500px 500px;
+                    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+                }
+
+                .hero-description {
+                    font-size: 1.15rem;
+                    color: var(--text-muted);
+                    line-height: 1.5;
+                    margin-bottom: 30px;
+                }
+
+                .hero-cta-wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                .hero-bottom-marquee {
+                    margin-top: 80px;
+                    border-top: 1px solid var(--border-subtle);
+                    padding-top: 40px;
+                }
+
+                .client-logos {
+                    display: flex;
+                    justify-content: space-between;
+                    opacity: 0.3;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 1200px) {
+                    .hero-title { font-size: 3.5rem; }
+                    .hero-grid { grid-template-columns: 1fr 1fr; }
+                    .hero-right { grid-column: span 2; display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 40px; }
+                    .hero-description { margin-bottom: 0; max-width: 500px; }
+                }
+
+                @media (max-width: 768px) {
+                    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+                    .hero-left { display: flex; flex-direction: column; align-items: center; }
+                    .hero-title { font-size: 3rem; white-space: normal; }
+                    .hero-right { flex-direction: column; text-align: center; }
+                    .hero-cta-wrapper { justify-content: center; }
+                    .person-wrapper { height: 400px; }
+                    .client-logos { flex-wrap: wrap; justify-content: center; gap: 30px; }
+                }
+            `}</style>
     </section>
   );
 };

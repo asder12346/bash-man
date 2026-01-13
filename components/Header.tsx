@@ -47,8 +47,8 @@ const Header = () => {
         }
 
         .header.scrolled {
-          background: rgba(5, 5, 5, 0.9);
-          backdrop-filter: blur(10px);
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(12px);
           border-bottom: 1px solid var(--border-subtle);
         }
 
@@ -62,14 +62,15 @@ const Header = () => {
           display: flex;
           align-items: center;
           gap: 10px;
-          font-family: var(--font-display);
+          font-family: var(--font-body);
           font-weight: 800;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           color: var(--text-main);
+          letter-spacing: -0.02em;
         }
 
         .logo-icon {
-          color: var(--accent-primary);
+          color: var(--text-main);
         }
 
         .nav-links {
@@ -79,9 +80,10 @@ const Header = () => {
         }
 
         .nav-links a:not(.btn) {
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           color: var(--text-muted);
           font-weight: 500;
+          transition: color 0.3s;
         }
 
         .nav-links a:not(.btn):hover {
@@ -89,25 +91,31 @@ const Header = () => {
         }
 
         .mobile-toggle {
-          display: none;
-          background: none;
-          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: var(--bg-tertiary);
+          border: 1px solid var(--border-light);
           color: var(--text-main);
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .mobile-toggle:hover {
+            background: var(--accent-primary);
         }
 
         @media (max-width: 768px) {
-          .mobile-toggle {
-            display: block;
-          }
-          
           .nav-links {
             position: fixed;
             top: var(--header-height);
             left: 0;
             right: 0;
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
             flex-direction: column;
             padding: 40px;
             gap: 20px;

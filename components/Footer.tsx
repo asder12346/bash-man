@@ -77,8 +77,8 @@ const Footer = () => {
 
         .footer-logo {
           color: var(--text-main);
-          font-family: var(--font-display);
-          font-size: 1.5rem;
+          font-family: var(--font-body);
+          font-size: 1.25rem;
           font-weight: 800;
           display: block;
           margin-bottom: 24px;
@@ -89,6 +89,7 @@ const Footer = () => {
           font-size: 1rem;
           line-height: 1.7;
           margin-bottom: 32px;
+          color: var(--text-muted);
         }
 
         .footer-social-icons {
@@ -100,32 +101,29 @@ const Footer = () => {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background: var(--bg-tertiary);
+          background: var(--bg-secondary);
           border: 1px solid var(--border-subtle);
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 0.9rem;
-          font-weight: 700;
           color: var(--text-main);
           transition: all 0.3s ease;
         }
 
         .footer-social-link:hover {
           background: var(--accent-primary);
-          color: var(--text-dark);
           transform: translateY(-3px);
           border-color: var(--accent-primary);
         }
 
         .footer-title {
           color: var(--text-main);
-          font-family: var(--font-display);
-          font-size: 1.1rem;
+          font-family: var(--font-body);
+          font-size: 0.85rem;
           font-weight: 700;
           margin-bottom: 24px;
           text-transform: uppercase;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.1em;
         }
 
         .footer-list {
@@ -135,10 +133,11 @@ const Footer = () => {
 
         .footer-list a {
           transition: color 0.3s;
+          font-size: 0.95rem;
         }
 
         .footer-list a:hover {
-          color: var(--accent-primary);
+          color: var(--text-main);
         }
 
         .footer-cta-text {
@@ -150,15 +149,13 @@ const Footer = () => {
         .footer-cta-button {
           display: inline-block;
           font-weight: 700;
-          color: var(--accent-primary);
+          color: var(--text-main);
           border-bottom: 2px solid var(--accent-primary);
           padding-bottom: 4px;
           transition: all 0.3s;
         }
 
         .footer-cta-button:hover {
-          color: var(--text-main);
-          border-color: var(--text-main);
           letter-spacing: 0.05em;
         }
 

@@ -44,7 +44,7 @@ const About = () => {
         .about-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 60px;
+          gap: 80px;
           align-items: center;
         }
 
@@ -54,71 +54,68 @@ const About = () => {
 
         .founder-placeholder {
           width: 100%;
-          aspect-ratio: 1;
-          background: #1a1a1a;
-          border-radius: 20px;
+          aspect-ratio: 0.85;
+          background: var(--bg-primary);
+          border-radius: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
           border: 1px solid var(--border-light);
           position: relative;
           overflow: hidden;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.03);
         }
         
-        .founder-placeholder::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent);
-        }
-
         .placeholder-content {
-          font-family: var(--font-display);
+          font-family: var(--font-serif);
           font-size: 5rem;
           font-weight: 800;
-          color: var(--bg-primary);
-          text-shadow: -1px -1px 0 rgba(255,255,255,0.1), 1px 1px 0 rgba(255,255,255,0.05);
+          font-style: italic;
+          color: var(--accent-primary);
+          opacity: 0.5;
         }
 
         .section-title {
-          font-size: 2.5rem;
-          margin-bottom: 20px;
+          font-size: 3rem;
+          margin-bottom: 24px;
         }
 
         .section-line {
           width: 60px;
-          height: 4px;
+          height: 3px;
           background: var(--accent-primary);
-          margin-bottom: 30px;
+          margin-bottom: 32px;
         }
 
         .about-text {
-          margin-bottom: 20px;
-          font-size: 1.1rem;
-        }
-
-        .about-text strong {
-          color: var(--text-main);
+          margin-bottom: 24px;
+          font-size: 1.15rem;
+          line-height: 1.6;
         }
 
         .about-highlights {
-          margin-top: 30px;
+          margin-top: 40px;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 16px;
+          gap: 20px;
         }
 
         .about-highlights li {
-          font-weight: 500;
+          font-weight: 600;
           color: var(--text-main);
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
+          font-size: 0.95rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
           .about-grid {
             grid-template-columns: 1fr;
+          }
+          .about-image-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
           }
         }
       `}</style>
