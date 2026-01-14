@@ -16,8 +16,7 @@ const Hero = () => {
         <div className="hero-top-meta reveal fade-up">
           <div className="medal-badge">
             <span className="medal-year">2026</span>
-            <span className="medal-text">Elite Marketer of the Year</span>
-          </div>
+            <span className="medal-text">guinness world record holder</span>
         </div>
 
         <div className="hero-grid">
