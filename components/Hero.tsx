@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="hero-top-meta reveal fade-up">
           <div className="medal-badge">
             <span className="medal-year">2026</span>
-            <span className="medal-text">guinness world record holder</span>
+            <span className="medal-text">Guinness world record holder</span>
         </div>
 
         <div className="hero-grid">
@@ -38,7 +38,7 @@ const Hero = () => {
                 <img src="https://i.pravatar.cc/100?u=2" alt="Avatar" />
                 <img src="https://i.pravatar.cc/100?u=3" alt="Avatar" />
               </div>
-              <p>Trusted by 300+ scale-ups <br /> across 15+ industries.</p>
+                <p>Trusted by 300+ scale-ups <br /> across 15+ industries.<br />Learn from the best—he is a <strong>Guinness world record holder</strong>.</p>
             </div>
           </div>
 
