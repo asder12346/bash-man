@@ -11,6 +11,9 @@ const LearnSection = () => {
                     <h2 className="section-title">Learn from <span className="text-accent-gradient">the best</span></h2>
                     <p className="learn-text">
                         Success leaves clues. Beyond managing campaigns, I believe in empowering brands with the knowledge they need to stay ahead. By working with Bash Rabiu, you don't just get a service provider — you get an elite marketing mentor.
+                        </p>
+                        <p className="learn-text">
+                            Bash Rabiu is also a Guinness World Record holder, bringing a unique level of excellence and achievement to every mentorship experience.
                     </p>
                     <p className="learn-text">
                         I've spent years deconstructing what makes the top 1% of brands successful, from their psychological triggers to their technical back-end systems. My "Learn from the best" philosophy means every strategy I implement is explained, every metric is demystified, and every growth lever is handed over to you with complete clarity.
