@@ -6,9 +6,8 @@ const About = () => {
       <div className="container">
         <div className="about-grid">
           <div className="about-image-wrapper reveal fade-left">
-            {/* Placeholder for Founder Image - Using a stylized div for now */}
-            <div className="founder-placeholder">
-              <div className="placeholder-content">LB</div>
+            <div className="founder-image-container">
+              <img src="/profile.png" alt="Bash Rabiu" className="founder-img" />
             </div>
           </div>
 
@@ -52,27 +51,22 @@ const About = () => {
           position: relative;
         }
 
-        .founder-placeholder {
+        .founder-image-container {
           width: 100%;
           aspect-ratio: 0.85;
           background: var(--bg-primary);
           border-radius: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           border: 1px solid var(--border-light);
           position: relative;
           overflow: hidden;
           box-shadow: 0 20px 40px rgba(0,0,0,0.03);
         }
         
-        .placeholder-content {
-          font-family: var(--font-serif);
-          font-size: 5rem;
-          font-weight: 800;
-          font-style: italic;
-          color: var(--accent-primary);
-          opacity: 0.5;
+        .founder-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .section-title {

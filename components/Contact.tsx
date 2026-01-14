@@ -15,7 +15,7 @@ const Contact = () => {
     alert('Thank you! I will get back to you shortly.');
   };
 
-  const contactImg = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80";
+  const contactImg = "/profile.png";
 
   return (
     <section id="contact" className="section contact-section">

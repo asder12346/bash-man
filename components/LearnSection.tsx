@@ -2,7 +2,7 @@ import React from 'react';
 
 const LearnSection = () => {
     // Image representing expertise/education
-    const learnImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80";
+    const learnImg = "/profile.png";
 
     return (
         <section id="learn" className="section learn-section">
